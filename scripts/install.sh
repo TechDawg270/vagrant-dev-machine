@@ -26,9 +26,6 @@ fi
 pip install -U awscli
 pip install -U awsebcli
 
-# install ChefDK
-curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk -c stable
-
 #terraform
 T_VERSION=$(terraform -v | head -1 | cut -d ' ' -f 2 | tail -c +2)
 T_RETVAL=${PIPESTATUS[0]}
