@@ -7,10 +7,9 @@
 
 ## Tools Included
 * Git
-* ChefDK (latest release with no version constraint/parameter)
 * Ansible
-* Terraform (v0.9.8)
-* Packer (v1.0.0)
+* Terraform (v0.11.1)
+* Packer (v1.1.2)
 * AWS CLI
 
 ## Getting Started
