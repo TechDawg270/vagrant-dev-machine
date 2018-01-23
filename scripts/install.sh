@@ -1,8 +1,8 @@
 #!/bin/bash
 set -x
 
-TERRAFORM_VERSION="0.11.1"
-PACKER_VERSION="1.1.2"
+TERRAFORM_VERSION="0.11.2"
+PACKER_VERSION="1.1.3"
 
 # create new ssh key
 [[ ! -f /home/ubuntu/.ssh/mykey ]] \
@@ -11,7 +11,7 @@ PACKER_VERSION="1.1.2"
 && chown -R ubuntu:ubuntu /home/ubuntu/.ssh
 
 # install packages
-apt-get update
+sudo apt-get update && sudo apt-get -y upgrade
 apt-get -y install ansible unzip curl git-all
 
 # install pip
