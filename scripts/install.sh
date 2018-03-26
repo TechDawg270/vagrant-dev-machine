@@ -1,8 +1,8 @@
 #!/bin/bash
 set -x
 
-TERRAFORM_VERSION="0.11.2"
-PACKER_VERSION="1.1.3"
+TERRAFORM_VERSION="0.11.5"
+PACKER_VERSION="1.2.1"
 
 # create new ssh key
 [[ ! -f /home/ubuntu/.ssh/mykey ]] \
@@ -11,8 +11,8 @@ PACKER_VERSION="1.1.3"
 && chown -R ubuntu:ubuntu /home/ubuntu/.ssh
 
 # install packages
-sudo apt-get update && sudo apt-get -y upgrade
-apt-get -y install ansible unzip curl git-all
+sudo apt-get update
+apt-get -y install unzip curl git-all
 
 # install pip
 pip install -U pip && pip3 install -U pip
@@ -25,6 +25,9 @@ fi
 # install awscli and ebcli
 pip install -U awscli
 pip install -U awsebcli
+
+# install Ansible
+pip install -U ansible
 
 #terraform
 T_VERSION=$(terraform -v | head -1 | cut -d ' ' -f 2 | tail -c +2)
