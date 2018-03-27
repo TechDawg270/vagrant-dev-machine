@@ -2,6 +2,10 @@
 
 A vagrant machine running Ubuntu with all the fixins to do the DevOps'n
 
+## VirtualBox
+
+[Download VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+
 ## Vagrant Install
 
 Visit the [Vagrant downloads page](https://www.vagrantup.com/downloads.html), or try something like this
