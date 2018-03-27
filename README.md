@@ -24,6 +24,8 @@ Visit the [Vagrant downloads page](https://www.vagrantup.com/downloads.html), or
 `vagrant ssh`
 
 ### Synced Folders
-* Default directory for mapping local machine repos to the Vagrant box is `local => ~/Development` to `ubuntu vagrant => /home/ubuntu/Development`
+* By default, Vagrant will share your project directory (the current working directory with the Vagrantfile) to `/vagrant` on the vagrant machine
 
-* A mapped directory for AWS creds
+* If the local directory `~/Development` exists then it is mapped to `~/Development` on the vagrant machine
+
+* If the local directory `~/.aws` exists then it is mapped to `~/.aws` on the vagrant machine
