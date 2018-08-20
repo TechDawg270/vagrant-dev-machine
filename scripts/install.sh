@@ -10,8 +10,10 @@ PACKER_VERSION="1.2.5"
 && ssh-keygen -f /home/ubuntu/.ssh/mykey -N '' \
 && chown -R ubuntu:ubuntu /home/ubuntu/.ssh
 
+# update package cache and upgrade to latest
+sudo apt-get update && apt-get -y upgrade
+
 # install packages
-sudo apt-get update
 apt-get -y install unzip curl git-all
 
 # install pip
@@ -28,6 +30,9 @@ pip install -U awsebcli
 
 # install Ansible
 pip install -U ansible
+
+# install boto3
+pip install boto3
 
 #terraform
 T_VERSION=$(terraform -v | head -1 | cut -d ' ' -f 2 | tail -c +2)
